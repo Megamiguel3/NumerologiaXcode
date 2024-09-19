@@ -593,7 +593,7 @@ struct ContentView: View {
             placer = String(herancaTotalQ);
         }
         var herancaTotalStr = placer;
-        results = results + "Herança Total: " + String(herancaTotalStr) + "\n";
+        results = results + "Herança Total: " + String(herancaTotalStr) + "\n\n";
         
     }
     var body: some View {
