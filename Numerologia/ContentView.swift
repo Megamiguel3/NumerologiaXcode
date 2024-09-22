@@ -18,15 +18,15 @@ struct ContentView: View {
     @State var tabela: [(Int,[String])] = []
     
     func fillTabela() {
-        tabela.append((1,["A","J","S"]));
+        tabela.append((1,["A","J","S","Ã","Â","Á","À"]));
         tabela.append((2,["B","K","T"]));
-        tabela.append((3,["C","L","U"]));
+        tabela.append((3,["C","L","U","Ç","Û","Ú","Ù"]));
         tabela.append((4,["D","M","V"]));
-        tabela.append((5,["E","N","X"]));
-        tabela.append((6,["F","O","W"]));
+        tabela.append((5,["E","N","X","Ê","É","È"]));
+        tabela.append((6,["F","O","W","Õ","Ô","Ó","Ò"]));
         tabela.append((7,["G","P","Y"]));
         tabela.append((8,["H","Q","Z"]));
-        tabela.append((9,["I","R"]));
+        tabela.append((9,["I","R","Î","Í","Ì"]));
     }
     
     func updateField() {
@@ -44,7 +44,7 @@ struct ContentView: View {
         results = nome_proprio + "\u{00a0}" + apelidoMae + "\u{00a0}" + apelidoPai + "\n";
         results = results + dataNascimento.description + "\n";
         
-        results = results + "Numerologia START! \n \n"
+        results = results + "\nNumerologia START! \n \n"
         //Process Numerologia
         //Número da Vida
         var placer = date;
@@ -602,7 +602,7 @@ struct ContentView: View {
             TextField("Insira aqui o(s) nome(s) próprio(s)", text: $nome_proprio).padding()
             TextField("Insira aqui o apelido materno", text: $apelidoMae).padding()
             TextField("Insira aqui o apelido paterno", text: $apelidoPai).padding()
-            DatePicker("Selecione a data de nascimento",selection: $dataNascimento,displayedComponents: [.date]).padding()
+            DatePicker("Selecione a data de nascimento",selection: $dataNascimento).padding()
             
             Button(action: {loadNumerologia()}) {
                 Text("Carregar Numerologia")
